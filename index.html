@@ -23,7 +23,7 @@
       background: white;
       border-radius: 16px;
       padding: 30px;
-      max-width: 500px;
+      max-width: 650px; /* aumentamos el ancho */
       width: 100%;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
@@ -36,9 +36,10 @@
     }
 
     h1 {
-      font-size: 24px;
+      font-size: 22px; /* levemente más chico */
       margin-bottom: 15px;
       color: #0277bd;
+      white-space: nowrap; /* evita el salto de línea */
     }
 
     p {
@@ -67,13 +68,18 @@
       font-weight: bold;
       color: #004d73;
     }
+
+    @media (max-width: 480px) {
+      h1 {
+        white-space: normal; /* para evitar desbordes en pantallas chicas */
+      }
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <img src="./img/logo.png" alt="Grupo Urbano Desarrollos SA" />
-    <h1>¡Esta calculadora ya no está disponible!</h1>
-    <p>La calculadora ya no se encuentra en esta página.</p>
+    <h1>La calculadora ya no se encuentra en esta página</h1>
     <p>Podés acceder a la nueva versión desde el siguiente enlace:</p>
     <a class="button" href="https://gudesarrollos.com.ar/calculadora" target="_blank">Ir a la nueva calculadora</a>
     <p class="code">Código de acceso: <strong>ABC1234</strong></p>
